@@ -28,8 +28,8 @@
       </script>
     </div>
     {% endif %}
-    {% if FACEBOOK_COMMENT_SITE %}
-    <div class="fb-comments" data-href="{{FACEBOOK_COMMENT_SITE}}" data-width="{{FACEBOOK_COMMENT_WIDTH}}" data-num-posts="{{FACEBOOK_COMMENT_NUM_POST}}"></div>
+    {% if FACEBOOK_COMMENT %}
+    <div class="fb-comments" data-href="{{ SITEURL }}/{{ article.url }}" data-width="{{FACEBOOK_COMMENT_WIDTH}}" data-num-posts="{{FACEBOOK_COMMENT_NUM_POST}}"></div>
     {% endif %}
 
   </article>

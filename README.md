@@ -5,10 +5,17 @@
 
 Inspiration from 37signals blog.
 
-Facebook comment plugin configuration
+Twitter plugin configuration
 -------------------------------------
-- FACEBOOK\_COMMENT\_SITE = \<URL to comment on\>
-- FACEBOOK\_COMMENT\_LANG = \<language code\>
-- FACEBOOK\_COMMENT\_APPID = \<Facebook appId\>
+- (TBD)
+
+Facebook plugin configuration
+-------------------------------------
+- FACEBOOK\_APPID = \<facebook appId\>
+- FACEBOOK\_LOCALE = \<locale for facebook plugins\>
+
+- FACEBOOK\_LIKE = True
+
+- FACEBOOK\_COMMENT = True
 - FACEBOOK\_COMMENT\_NUM\_POST = 5
 - FACEBOOK\_COMMENT\_WIDTH = 600
