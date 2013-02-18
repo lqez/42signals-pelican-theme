@@ -11,8 +11,9 @@
     </header>
 
     <div class="entry-content">
-      {% include 'article_infos.html' %}
+      {% include 'article_info_headers.html' %}
       {{ article.content }}
+      {% include 'article_info_footers.html' %}
     </div><!-- /.entry-content -->
     {% if DISQUS_SITENAME %}
     <div class="comments">
