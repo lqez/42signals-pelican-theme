@@ -10,6 +10,9 @@
                 <article>
                     <h1 class="entry-title"><a href="{{ SITEURL }}/{{ article.url }}">{{ article.title }}</a></h1> 
                     {% include 'article_info_headers.html' %}{{ article.content }}{% include 'article_info_footers.html' %}{% include 'comments.html' %}
+                    {% if FACEBOOK_COMMENT %}
+                    <div class="fb-comments" data-href="{{ SITEURL }}/{{ article.url }}" data-width="{{FACEBOOK_COMMENT_WIDTH}}" data-num-posts="{{FACEBOOK_COMMENT_NUM_POST}}"></div>
+                    {% endif %}
                 </article>
                 {% if loop.length == 1 %}
                     {% include 'pagination.html' %}
