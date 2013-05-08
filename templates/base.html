@@ -4,12 +4,22 @@
     <title>{% block title %}{{ SITENAME }}{%endblock%}</title>
     <meta charset="utf-8" />
     <meta name="viewport" content="initial-scale=0.8, minimum-scale=0.8" />
+    <meta name="apple-mobile-web-app-capable" content="yes" />
     <link rel="stylesheet" href="{{ SITEURL }}/theme/css/{{ CSS_FILE }}" type="text/css" />
     {% if FEED_ALL_ATOM %}
     <link href="{{ FEED_DOMAIN }}/{{ FEED_ALL_ATOM }}" type="application/atom+xml" rel="alternate" title="{{ SITENAME }} Atom Feed" />
     {% endif %}
     {% if FEED_ALL_RSS %}
     <link href="{{ FEED_DOMAIN }}/{{ FEED_ALL_RSS }}" type="application/rss+xml" rel="alternate" title="{{ SITENAME }} RSS Feed" />
+    {% endif %}
+    {% if APPLE_TOUCH_ICON %}
+    <link rel="apple-touch-icon" href="static/images/icons/{{ APPLE_TOUCH_ICON }}"/>
+    {% endif %}
+    {% if APPLE_TOUCH_ICON_72 %}
+    <link rel="apple-touch-icon" sizes="72x72" href="static/images/icons/{{ APPLE_TOUCH_ICON_72 }}"/>
+    {% endif %}
+    {% if APPLE_TOUCH_ICON_114 %}
+    <link rel="apple-touch-icon" sizes="114x114" href="static/images/icons/{{ APPLE_TOUCH_ICON_114 }}"/>
     {% endif %}
 
     <!--[if IE]>
