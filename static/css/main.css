@@ -59,6 +59,7 @@ a:hover, a:active {
 	
 /* Paragraphs */
 p {margin-bottom: 0.5em; line-height:180%;}
+article > p {text-align:justify;}
 
 strong, b {font-weight: bold;}
 strong {
@@ -257,8 +258,17 @@ article {
 
 article img {
     width: 100%;
-    margin: auto 0;
-    border: 1px solid #ddd;
+    display: block;
+    max-width: 500px;
+    height: auto;
+    border-radius: 5px;
+
+    border-style: solid;
+    border-width: 1px;
+    border-color: #EEE #DDD #BBB;
+    margin: 5px auto;
+    float: none;
+    box-shadow: rgba(0, 0, 0, 0.14902) 0px 1px 3px;
 }
 
 #content {
