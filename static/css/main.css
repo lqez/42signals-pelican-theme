@@ -52,7 +52,7 @@ a {outline: 0; color:#477b96; text-decoration: none;}
 a img {border: 0px; text-decoration: none;}
 	
 /* Paragraphs */
-p {margin-bottom: 0.5em; line-height:180%;}
+p {margin-bottom: 1.0em; line-height:180%;}
 article > p {text-align:justify;}
 
 strong, b {font-weight: bold;}
@@ -81,7 +81,7 @@ ol {
 	margin: 1em 0 1.5em 1.5em;
 }
 
-li:before {
+ul li:before {
     content: "• ";
     color: #679ba6;
     font-size: 8pt;
