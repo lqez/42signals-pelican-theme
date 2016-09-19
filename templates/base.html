@@ -5,6 +5,8 @@
     <meta charset="utf-8" />
     <meta name="viewport" content="initial-scale=0.8, minimum-scale=0.8" />
     <meta name="apple-mobile-web-app-capable" content="yes" />
+    {% block head %}{% endblock %}
+
     <link rel="stylesheet" href="{{ SITEURL }}/theme/css/{{ CSS_FILE }}" type="text/css" />
     {% if FEED_ALL_ATOM %}
     <link href="{{ FEED_DOMAIN }}/{{ FEED_ALL_ATOM }}" type="application/atom+xml" rel="alternate" title="{{ SITENAME }} Atom Feed" />

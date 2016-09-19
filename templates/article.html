@@ -1,5 +1,15 @@
 {% extends "base.html" %}
+
+{% block head %}
+    <meta property="og:url" content="{{ SITEURL }}/{{ article.url }}"/>
+    <meta property="og:title" content="{{ article.title|striptags }}"/>
+    {% if article.image %}
+    <meta property="og:image" content="{{ SITEURL }}/{{ article.image }}"/>
+    {% endif %}
+{% endblock %}
+
 {% block title %}{{ article.title|striptags }}{% endblock %}
+
 {% block content %}
 <section id="content" class="body">
   <article>
