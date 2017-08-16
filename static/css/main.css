@@ -11,20 +11,25 @@
 @import url("reset.css");
 @import url("pygment.css");
 @import url("typogrify.css");
-@import url(http://fonts.googleapis.com/css?family=Lato:300);
+@import url(https://fonts.googleapis.com/css?family=Lato:300);
 
 /***** Global *****/
 /* Body */
 body {
     background: transparent;
-    color: #444;
-    font-size: 100%; /* Base font size: 14px */
+    color: #333;
+    font-size: 15pt;
     font-family: sans-serif;
     font-weight: 300;
     line-height: 1.429;
     margin: 0;
     padding: 0;
     text-align: left;
+}
+html, body {
+    height: 100%;
+    -webkit-text-size-adjust: 100%;
+    -webkit-font-smoothing: antialiased;
 }
 
 /* Headings */
@@ -41,6 +46,7 @@ h1, h2, h3, h4, h5, h6 {
 	line-height: 1.2;
     letter-spacing: 1px;
 	margin-bottom: .5em;
+    word-break: keep-all;
 }
 
 h3, h4, h5, h6 { margin-top: .8em; }
@@ -57,16 +63,14 @@ a img {border: 0px; text-decoration: none;}
 	
 /* Paragraphs */
 p {margin-bottom: 1.0em; line-height:180%;}
-article > p {text-align:justify;}
 
-strong, b {font-weight: bold;}
+strong, b {font-weight: 500;}
 strong {
-    background-color: #e2ebf5;
-    border-radius: 3px;
+    background-color: #fcfcfc;
+    border-radius: 4px;
     padding: 2px 5px;
     margin: -2px 0px;
-    border-right: 1px solid #c2cbd5;
-    border-bottom: 1px solid #c2cbd5;
+    border: 1px solid #eee;
 }
 em, i {font-style: italic;}
 
@@ -75,7 +79,7 @@ ul {
 	list-style: none;
 	padding: 0.5em 1em 0.5em 1.5em;
     background-color: #fcfcfc;
-    border: 1px solid #EEE;
+    border: 1px solid #eee;
     border-radius: 3px;
     margin: 0em 0 1.5em 0;
 }
@@ -113,15 +117,15 @@ ul ul li:before {
 }
 
 .post-info {
-    margin:10px;
+    margin:10px 0 20px;
     font-size: 0.8em;
-    padding:5px;
     color: #AAA;
     text-align: right;
 }
 
 .post-info > abbr, .author {
     display: block;
+    text-decoration: none;
 }
 
 .post-info-footer {
@@ -155,7 +159,7 @@ pre{background-color:  rgb(238, 238, 238); padding: 10px; margin: 10px; overflow
 
 /* Quotes */
 blockquote {
-    margin: 20px;
+    margin: 40px;
     font-style: italic;
 }
 
@@ -249,7 +253,7 @@ figure.left {float: left; margin: 0 2em 2em 0;}
 *****************/
 article {
     padding: 3em 1em 4em;
-    max-width: 920px;
+    max-width: 880px;
     margin: 0 auto;
     border-bottom: 1px solid #ddd;
 }
@@ -265,8 +269,6 @@ article a:hover, article a:active {
 
 article img {
     width: 100%;
-    display: block;
-    max-width: 800px;
     height: auto;
     border: 1px solid #FAFAFA;
     border-radius: 3px;
