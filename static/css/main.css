@@ -9,18 +9,18 @@
 
 /* Imports */
 @import url('reset.css');
-@import url('//fonts.googleapis.com/earlyaccess/notosanskr.css');
-@import url('//fonts.googleapis.com/css?family=Roboto:400|Lato:500|Source+Code+Pro:400');
+@import url('pygment.css');
+@import url('//fonts.googleapis.com/css?family=Noto+Sans+KR:400,700|Roboto:400,700|Lato:400,700|Inconsolata:400,700');
 
 /***** Global *****/
 /* Body */
 body {
   background: transparent;
-  color: #333;
-  font-size: 14pt;
+  color: #505356;
+  font-size: 13.6pt;
   font-family: 'Roboto', 'Noto Sans KR', sans-serif;
   font-weight: 400;
-  line-height: 1.429;
+  line-height: 1.667;
   margin: 0;
   padding: 0;
   text-align: left;
@@ -41,7 +41,7 @@ h6 {font-size: 1.4em}
 
 h1, h2, h3, h4, h5, h6 {
   font-family: 'Lato', 'Noto Sans KR', sans-serif;
-  font-weight: 500;
+  font-weight: 700;
   line-height: 1.2;
   margin-top: 3em;
   margin-bottom: .5em;
@@ -60,23 +60,17 @@ a {outline: 0; color:#477b96; text-decoration: none;}
 a img {border: 0px; text-decoration: none;}
 	
 /* Paragraphs */
-p {margin-top: 1.5em; line-height:180%;}
+p {line-height:1.825;}
+p + p {margin-top: 1.5em;}
 
-strong, b {font-weight: 500;}
-strong {
-    background-color: #fcfcfc;
-    border-radius: 4px;
-    padding: 2px 5px;
-    margin: -2px 0px;
-    border: 1px solid #eee;
-}
+strong, b {font-weight: 700;}
 em, i {font-style: italic;}
 
 /* Lists */
 article ul {
 	list-style: none;
 	padding: 0.5em 1em 0.5em 1.5em;
-  margin: 0em 0 1.5em 0;
+  margin: 0em 0 0.5em 0;
 }
 
 article ol {
@@ -90,23 +84,22 @@ article ul li:before {
     font-size: 8pt;
     padding-right: 10px;
     margin-left: -16px;
-    position: relative;
-    top: -3pt;
+    position: absolute;
 }
 
 article li {
     margin: 0.25em 0 0.25em 0em;
-    line-height: 150%;
+    line-height: 160%;
 }
 
 article ul ul li:before {
     content: "–";
     color: #878787;
-    top: -2pt;
+    position: absolute;
 }
 
 .post-info {
-    margin:10px 0 20px;
+    margin:10px 0 50px;
     font-size: 0.8em;
     color: #AAA;
     text-align: right;
@@ -240,7 +233,7 @@ figure.left {float: left; margin: 0 2em 2em 0;}
 *****************/
 article {
     padding: 3em 1em 4em;
-    max-width: 880px;
+    max-width: 800px;
     margin: 0 auto;
     border-bottom: 1px solid #ddd;
 }
@@ -255,9 +248,9 @@ article a:hover, article a:active {
 }
 
 article img {
-    width: 100%;
+    max-width: 100%;
     height: auto;
-    border: 1px solid #FAFAFA;
+    border: 1px solid #e0e0e0;
     border-radius: 3px;
     margin: 5px auto;
     float: none;
@@ -436,15 +429,28 @@ article img {
     text-decoration: none;
 }
 
-pre, code {
-    font-family: "Source Code Pro", monospace;
-    background-color: #f8f8f8;
-    border: 1px solid #ccc;
-    font-size: 75%;
+pre {
+    font-family: "Inconsolata", monospace;
+    background-color: #f4f8fa;
+    border: 1px solid #ddeaf1;
     overflow: auto;
-    margin: 5px 0;
-    padding: 3px 10px;
+    margin: 10px 0;
+    padding: 10px;
     border-radius: 3px;
     position: relative;
-    top: -2pt;
+    line-height: 1.2;
+    font-size: 90%;
+}
+
+code {
+    font-family: "Inconsolata", monospace;
+    background-color: #fafcfd;
+    border: 1px solid #e1e2e3;
+    overflow: auto;
+    margin: 3px;
+    padding: 3px 5px;
+    border-radius: 2px;
+    position: relative;
+    top: -1px;
+    font-size: 90%;
 }

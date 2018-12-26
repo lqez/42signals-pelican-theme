@@ -5,6 +5,8 @@
     <meta property="og:title" content="{{ article.title|striptags }}"/>
     {% if article.image %}
     <meta property="og:image" content="{{ SITEURL }}/{{ article.image }}"/>
+    {% elif SITE_IMAGE %}
+    <meta property="og:image" content="{{ SITEURL }}/{{ SITE_IMAGE }}"/>
     {% endif %}
 {% endblock %}
 
@@ -40,7 +42,7 @@
     </div>
     {% endif %}
     {% if FACEBOOK_COMMENT %}
-    <div class="fb-comments" data-href="{{ SITEURL }}/{{ article.url }}" data-width="{{FACEBOOK_COMMENT_WIDTH}}" data-num-posts="{{FACEBOOK_COMMENT_NUM_POST}}"></div>
+    <div class="fb-comments" data-href="{{ SITEURL }}/{{ article.url }}" data-width="{{FACEBOOK_COMMENT_WIDTH}}"  data-num-posts="{{FACEBOOK_COMMENT_NUM_POST}}"></div>
     {% endif %}
 
   </article>

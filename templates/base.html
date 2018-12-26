@@ -35,8 +35,6 @@
         <link rel="stylesheet" type="text/css" media="all" href="{{ SITEURL }}/css/ie6.css"/><![endif]-->
 </head>
 <body id="index" class="home">
-{% include 'github.html' %}
-{% include 'facebook.html' %}
     <header id="banner" class="body">
         <h1><a href="{{ SITEURL }}/">{{ SITENAME }} {% if SITESUBTITLE %} <strong>{{ SITESUBTITLE }}</strong>{% endif %}</a></h1>
         <h2 id="greeting">Happy day.</h2>
@@ -93,6 +91,8 @@
         </address><!-- /#about -->
     </footer><!-- /#contentinfo -->
 
+{% include 'github.html' %}
+{% include 'facebook.html' %}
 {% include 'analytics.html' %}
 {% include 'piwik.html' %}
 {% include 'disqus_script.html' %}
