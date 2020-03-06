@@ -44,7 +44,35 @@
     {% if FACEBOOK_COMMENT %}
     <div class="fb-comments" data-href="{{ SITEURL }}/{{ article.url }}" data-width="{{FACEBOOK_COMMENT_WIDTH}}"  data-num-posts="{{FACEBOOK_COMMENT_NUM_POST}}"></div>
     {% endif %}
+    <!-- add anchor to headings -->
+    <script>
+    const headers = document.querySelectorAll('h2[id], h3[id]');
+    for(var i = 0; i < headers.length; i++) {
+      const node = headers[i];
+      const anchor = document.createElement("a");
+      anchor.className = "pilcrow";
+      anchor.text = "\xb6";
+      anchor.href = "#" + node.id;
+      node.appendChild(anchor);
+    };
+    </script>
+    <!-- img title to figcaption -->
+    <script>
+    window.addEventListener('load', function () {
+      const imgNodes = document.querySelectorAll('img[title]');
+      for(var i = 0; i < imgNodes.length; i++) {
+        const node = imgNodes[i];
+        const para = node.parentElement;
+        const figure = document.createElement('figure');
+        const figcaption = document.createElement('figcaption');
+        figcaption.innerHTML = node.getAttribute('title');
+        figure.append(para.removeChild(node));
+        figure.append(figcaption);
 
+        para.append(figure);
+      };
+    });
+    </script>
   </article>
 </section>
 {% endblock %}
